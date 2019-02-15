@@ -26,6 +26,9 @@ nav {
   align-items: center;
   justify-content: flex-end;
   position: fixed;
+  mix-blend-mode: difference;
+  background: black;
+  z-index: 10;
 }
 nav ul {
   height: 100%;
@@ -36,7 +39,6 @@ nav ul {
 nav ul li {
   list-style: none;
   padding: 0.5rem;
-  background: var(--dark-gray);
   display: flex;
   align-items: center;
 }
@@ -44,7 +46,8 @@ nav ul li:hover {
   border-bottom: 1px var(--white) solid;
 }
 nav a {
-  color: var(--white);
+  color: white;
+  mix-blend-mode: difference;
 }
 
 section {
