@@ -142,7 +142,11 @@ section {
   justify-content: center;
   background: var(--white);
 }
+.dev-work-wrapper div {
+  position: relative;
+}
 .dev-work {
+  display: inline-block;
   width: 320px;
   height: 230px;
   background-size: cover;
@@ -160,6 +164,17 @@ section {
   background-image: url('img/todo_list.png');
 }
 
+.dev-work-title {
+  color: #ffffff;
+  opacity: 0;
+  position: absolute;
+}
+.dev-work:hover + .dev-work-title {
+  opacity: 1;
+}
+.dev-work:hover {
+  filter: brightness(70%);
+}
 /* ============== Contact Section ============== */
 .contact {
   display: flex;
