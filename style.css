@@ -287,7 +287,7 @@ header .back:hover {
 }
 
 .work-content aside {
-  background-color: floralwhite;
+  background-color: var(--white);
   width: 25%;
   padding: 2rem;
   padding-top: 3rem;
@@ -300,4 +300,25 @@ aside .info {
 aside .info-title {
   font-size: 1rem;
   margin-bottom: 0.8rem;
+}
+
+footer {
+  height: 20vh;
+  background: var(--dark-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer ul {
+  display: flex;
+}
+footer ul li {
+  list-style: none;
+}
+footer ul li:hover {
+  opacity: 0.8;
+}
+footer ul li a {
+  color: var(--white);
+  padding: 3rem;
 }
