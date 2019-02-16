@@ -252,6 +252,21 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
+}
+header .back {
+  opacity: 0.8;
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  background-image: url('svg/left-arrow.svg');
+  background-size: cover;
+  top: 25px;
+  left: 25px;
+}
+
+header .back:hover {
+  opacity: 1;
 }
 
 .work-content .wrapper {
