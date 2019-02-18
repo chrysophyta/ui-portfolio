@@ -247,12 +247,26 @@ section {
 
 header {
   background-image: url('https://source.unsplash.com/random/1000x600');
-  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   position: relative;
+  color: #ffffff;
+  z-index: 1;
+}
+header:after {
+  content: '';
+  background: black;
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
 }
 header .back {
   opacity: 0.8;
@@ -268,39 +282,61 @@ header .back {
 header .back:hover {
   opacity: 1;
 }
+header h1,
+header p {
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
 
 .work-content .wrapper {
   display: flex;
   height: 100%;
   width: 80%;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .work-content article {
   /* border: 1px grey solid; */
-  width: 75%;
+  width: 80%;
   padding: 3rem;
 }
-
+.work-content article h5 {
+  margin-top: 1.2rem;
+}
 .work-content article p {
   margin: 0.8rem;
 }
-
+.work-content article li {
+  margin: 0.8rem;
+  text-indent: 30px;
+}
+.work-content .caption {
+  text-align: center;
+  font-size: 0.8rem;
+}
+/* 
 .work-content aside {
   background-color: var(--white);
   width: 25%;
   padding: 2rem;
   padding-top: 3rem;
   font-size: 0.8rem;
+} */
+.work-content img {
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  display: block;
 }
-
+/* 
 aside .info {
   margin-bottom: 3rem;
 }
 aside .info-title {
   font-size: 1rem;
   margin-bottom: 0.8rem;
-}
+} */
 
 footer {
   height: 20vh;
@@ -322,3 +358,13 @@ footer ul li a {
   color: var(--white);
   padding: 3rem;
 }
+
+/* ============== Work 1 Page ============== */
+/* ============== Work 2 Page ============== */
+.page2 header {
+  background-image: url('img/work2header.jpg');
+}
+.img2 {
+  background-image: url('img/work2_1.jpg');
+}
+/* ============== Work 3 Page ============== */
