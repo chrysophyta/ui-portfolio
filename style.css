@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato|Noto+Sans+TC');
 :root {
   --dark-gray: #303030;
   --light-gray: #aaaaaa;
@@ -16,7 +16,7 @@ html {
 
 body {
   font-size: 16px;
-  font-family: Lato;
+  font-family: Lato, 'Noto Sans TC';
 }
 a {
   text-decoration: none;
@@ -55,6 +55,15 @@ nav a {
 
 section {
   height: 100vh;
+  overflow: hidden;
+}
+p {
+  line-height: 2;
+}
+.section-title {
+  opacity: 0.5;
+  letter-spacing: 2px;
+  margin: 3rem;
 }
 .right {
   width: 50%;
@@ -69,21 +78,41 @@ section {
 /* ============== Home Section ============== */
 .home {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background: var(--dark-gray);
+  background-image: url('img/home_bg.png');
+  background-size: contain;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+.home:after {
+  content: '';
+  background: #000;
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
 }
 .my-name {
   font-size: 3rem;
-  color: var(--white);
+  z-index: 3;
+  margin-left: 3rem;
+}
+.my-name img {
+  width: 100%;
 }
 
 /* ============== About Section ============== */
 .about {
+  display: flex;
 }
 
 .my-photo {
-  background-image: url('https://images.unsplash.com/photo-1520717214176-885c3b3b6ca5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
+  background-image: url('img/selfie.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -93,7 +122,7 @@ section {
 .about-content {
   height: 100%;
   color: white;
-  background-color: var(--white);
+  background-color: var(--dark-gray);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,17 +135,21 @@ section {
 
 .ui-works {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--dark-gray);
+  background: var(--white);
 }
 .ui-work-wrapper,
 .dev-work-wrapper {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .ui-work {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
   background-size: cover;
   margin: 2rem;
   display: flex;
@@ -125,6 +158,8 @@ section {
 }
 .ui-work-title {
   opacity: 0;
+  color: white;
+  z-index: 1;
 }
 .ui-work:hover {
   filter: brightness(70%);
@@ -133,25 +168,36 @@ section {
   opacity: 1;
 }
 .ui-work1 {
-  background-image: url('https://images.unsplash.com/photo-1548382340-e7280a94e3ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80');
+  background-image: url('img/work1.png');
 }
 .ui-work2 {
-  background-image: url('https://images.unsplash.com/photo-1548413976-492b671eb54a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80');
+  background-image: url('img/work2.png');
 }
 .ui-work3 {
-  background-image: url('https://images.unsplash.com/photo-1548357155-ad6bba8955ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80');
+  background-image: url('img/work3.png');
 }
 
 /* ============== DEV Work Section ============== */
 .dev-works {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--white);
+  background: var(--dark-gray);
+}
+.dev-works .section-title {
+  color: white;
+}
+.dev-work-wrapper {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
 }
 .dev-work-wrapper > div {
   position: relative;
 }
+
 .dev-work {
   display: inline-block;
   width: 320px;
@@ -188,10 +234,28 @@ section {
   background-size: auto 120%;
   transition: background-size 3s ease-in-out, filter 0.5s;
 }
-/* ============== Talks Section ============== */
+/* ============== Talks leSection ============== */
 
 .talks {
-  background: var(--light-gray);
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.talk1 {
+  display: inline-block;
+  height: 300px;
+  width: 500px;
+  background-image: url('img/talk_1.jpg');
+  background-position: center;
+}
+.talks-wrapper {
+  display: flex;
+}
+.talk-info {
+  margin: 3rem;
 }
 /* ============== Contact Section ============== */
 .contact {
@@ -308,17 +372,23 @@ header p {
   padding: 3rem;
 }
 .work-content article h5 {
-  margin-top: 1.2rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 .work-content article p {
   margin: 0.8rem;
+  color: var(--dark-grey);
 }
 .work-content article li {
-  margin: 0.8rem;
+  margin: 0.5rem;
   text-indent: 30px;
 }
 .work-content .caption {
   text-align: center;
+  margin-top: 0rem;
+  margin-bottom: 3rem;
   font-size: 0.8rem;
 }
 /* 
@@ -345,6 +415,7 @@ aside .info-title {
 } */
 
 footer {
+  margin-top: 10rem;
   height: 20vh;
   background: var(--dark-gray);
   display: flex;
@@ -382,4 +453,22 @@ iframe {
 /* ============== Work 3 Page ============== */
 .page3 header {
   background-image: url('img/work3header.png');
+}
+
+@media screen and (max-width: 500px) {
+  .about {
+    flex-direction: column;
+  }
+  .left,
+  .right {
+    width: 100%;
+  }
+  .ui-work-wrapper,
+  .talks-wrapper,
+  .dev-work-wrapper {
+    flex-direction: column;
+  }
+  .contact {
+    flex-direction: column;
+  }
 }
