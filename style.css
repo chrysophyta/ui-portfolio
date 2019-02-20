@@ -245,14 +245,15 @@ p {
 }
 
 .talk1 {
-  display: inline-block;
+  display: block;
   height: 300px;
-  width: 500px;
+  width: 100%;
   background-image: url('img/talk_1.jpg');
   background-position: center;
 }
 .talks-wrapper {
   display: flex;
+  width: 80%;
 }
 .talk-info {
   margin: 3rem;
@@ -424,6 +425,7 @@ footer {
 }
 footer ul {
   display: flex;
+  width: 100%;
 }
 footer ul li {
   list-style: none;
@@ -456,6 +458,19 @@ iframe {
 }
 
 @media screen and (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+  nav {
+  }
+  nav ul {
+    width: 100%;
+    margin: 1.5rem;
+    margin-top: 5rem;
+    padding: 0;
+    font-size: 1.5rem;
+    justify-content: space-evenly;
+  }
   .about {
     flex-direction: column;
   }
@@ -470,5 +485,27 @@ iframe {
   }
   .contact {
     flex-direction: column;
+  }
+  .work-content .wrapper {
+    width: 100%;
+  }
+  .work-content article {
+    padding: 0;
+  }
+  footer {
+    height: auto;
+  }
+  footer ul {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+  footer ul li {
+    margin-top: 2rem;
+  }
+  #maincontent {
+    transform: scale(0.7);
+  }
+  iframe {
+    width: 100%;
   }
 }
