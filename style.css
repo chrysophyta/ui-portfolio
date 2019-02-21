@@ -84,6 +84,8 @@ p {
   background: var(--white);
   background-image: url('img/home_bg.png');
   background-size: contain;
+  background-repeat: repeat-y;
+  background-position: center;
   color: white;
   position: relative;
   z-index: 1;
@@ -91,7 +93,7 @@ p {
 .home:after {
   content: '';
   background: #000;
-  opacity: 0.1;
+  opacity: 0.3;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -247,9 +249,11 @@ p {
 .talk1 {
   display: block;
   height: 300px;
-  width: 100%;
+  width: 60%;
   background-image: url('img/talk_1.jpg');
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .talks-wrapper {
   display: flex;
