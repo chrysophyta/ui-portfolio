@@ -389,28 +389,13 @@ header p {
   margin-bottom: 3rem;
   font-size: 0.8rem;
 }
-/* 
-.work-content aside {
-  background-color: var(--white);
-  width: 25%;
-  padding: 2rem;
-  padding-top: 3rem;
-  font-size: 0.8rem;
-} */
+
 .work-content img {
   width: 100%;
   padding: 1rem;
   margin: 0 auto;
   display: block;
 }
-/* 
-aside .info {
-  margin-bottom: 3rem;
-}
-aside .info-title {
-  font-size: 1rem;
-  margin-bottom: 0.8rem;
-} */
 
 footer {
   margin-top: 10rem;
