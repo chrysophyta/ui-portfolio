@@ -82,6 +82,11 @@ p {
   height: 100%;
   float: left;
 }
+.img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /* ============== Home Section ============== */
 .home {
   display: flex;
@@ -120,11 +125,8 @@ p {
   display: flex;
 }
 
-.my-photo {
+.about-image {
   background-image: url('img/selfie.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   height: 100%;
   width: 100%;
 }
@@ -153,7 +155,6 @@ p {
 .ui-work {
   width: 250px;
   height: 250px;
-  background-size: cover;
   margin: 2rem;
   display: flex;
   align-items: center;
@@ -201,7 +202,6 @@ p {
   width: 320px;
   height: 230px;
   background-size: auto 100%;
-  background-position: center;
   margin: 2rem;
   display: flex;
   align-items: center;
@@ -247,8 +247,6 @@ p {
   height: 300px;
   width: 60%;
   background-image: url('img/talk_1.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: contain;
 }
 
