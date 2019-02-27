@@ -404,7 +404,8 @@ footer {
 }
 footer ul {
   display: flex;
-  width: 100%;
+  width: 60%;
+  justify-content: space-around;
 }
 footer ul li {
   list-style: none;
@@ -414,7 +415,6 @@ footer ul li:hover {
 }
 footer ul li a {
   color: var(--white);
-  padding: 3rem;
 }
 iframe {
   margin: 0 auto;
@@ -481,6 +481,7 @@ iframe {
   footer ul {
     flex-direction: column;
     margin-bottom: 3rem;
+    justify-content: center;
   }
   footer ul li {
     margin-top: 2rem;
