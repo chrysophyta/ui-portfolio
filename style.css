@@ -206,6 +206,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .dev-work1 {
   background-image: url('img/fish_game.png');
@@ -223,7 +224,7 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.dev-work:hover + .dev-work-title {
+.dev-work:hover > .dev-work-title {
   opacity: 1;
 }
 .dev-work:hover {
